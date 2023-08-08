@@ -30,5 +30,5 @@ int main(void)
 
     }
 
-    printf("%i\n", years);
+    printf("years: %i\n", years);
 }
