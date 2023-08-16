@@ -32,6 +32,7 @@ int main(void)
         printf("Tie!\n");
     }
 
+
 }
 
 int compute_score(string word)
@@ -43,6 +44,10 @@ int compute_score(string word)
         if (isupper(word[i]))
         {
             word[i] = tolower(word[i]);
+        }
+        else if (word[i] < 97)
+        {
+            word[i] = 63;
         }
         word[i] = POINTS[word[i] - 97];
         result = word[i] + result;
