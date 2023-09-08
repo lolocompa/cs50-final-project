@@ -55,4 +55,10 @@ int main(int argc, char *argv[])
         }
 
     }
+    if (images != NULL)
+    {
+        fclose(images);
+    }
+
+    fclose(forensic);
 }
