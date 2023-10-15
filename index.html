@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- TODO: Add multiple choice question here --> <h3>cual es el mejor club de argentina?</h3>
+                <h4></h4>
+                <button type = "button" id = "a">newells</button>
+                <button type = "button" id = "b">boca</button>
+                <button type = "button" id = "c">central</button>
+                <button type = "button" id = "d">independiente</button>
+
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- TODO: Add free response question here --><h3>cuantos dias tiene una semana?</h3>
+                <h5></h5>
+                <form>
+                    <input autocomplete="off" type="text" id="answer">
+                    <button type = "submit" id="submit">check answer</button>
+                </form>
+            </div>
+        </div>
+        <script>
+
+                let check = document.querySelector('h4');
+                document.querySelector('#a').addEventListener('click', function(event){
+                    let response = event.target.id
+                    if (response === 'a')
+                    {
+                        check.innerHTML = 'correct';
+                        let color = document.querySelector("#a")
+                        color.style.backgroundColor = "green";
+                    }
+
+                });
+                document.querySelector('#b').addEventListener('click', function(event){
+                    let response = event.target.id
+                    if (response === 'b')
+                    {
+                        check.innerHTML = 'incorrect';
+                        let color = document.querySelector("#b")
+                        color.style.backgroundColor = "red";
+
+                    }
+                });
+                document.querySelector('#c').addEventListener('click', function(event){
+                    let response = event.target.id
+                    if (response === 'c')
+                    {
+                        check.innerHTML = 'incorrect';
+                        let color = document.querySelector("#c")
+                        color.style.backgroundColor = "red";
+                    }
+                });
+                document.querySelector('#d').addEventListener('click', function(event){
+                    let response = event.target.id
+                    if (response === 'd')
+                    {
+                        check.innerHTML = 'incorrect';
+                        let color = document.querySelector("#d")
+                        color.style.backgroundColor = "red";
+                    }
+                });
+
+
+
+
+
+                let check2 = document.querySelector('h5');
+                document.querySelector('form').addEventListener('submit', function(event) {
+
+                    let answer = document.querySelector('#answer').value
+                    event.preventDefault()
+                    if (answer === '7')
+                    {
+                        let x = document.querySelector('#answer')
+                        check2.innerHTML = 'correct';
+                        x.style.backgroundColor = 'green';
+
+                    }
+                    else
+                    {
+                        let x = document.querySelector('#answer')
+                        check2.innerHTML = 'incorrect';
+                        x.style.backgroundColor = 'red';
+
+                    }
+                });
+        </script>
+    </body>
+</html>
