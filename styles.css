@@ -1,0 +1,23 @@
+.centered {
+    text-align:center;
+}
+
+.title_size {
+    font-size: 50px
+}
+
+.text_size {
+    font-size: 20px
+}
+
+.button_size {
+    padding: 25px 70px
+}
+
+.img_container {
+    display: flex
+}
+
+.about-me-title {
+    font-size: 30px
+}
