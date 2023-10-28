@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    quoted
+{% endblock %}
+
+{% block main %}
+    <div class="section">
+        <table>
+            <thead>
+                <tr>
+                    <th>name</th>
+                    <th>price</th>
+                    <th>symbol</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{ symbol_data.name }}</td>
+                    <td>{{ symbol_data.price }}</td>
+                    <td>{{ symbol_data.symbol }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+{% endblock %}
