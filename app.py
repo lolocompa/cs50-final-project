@@ -94,7 +94,10 @@ def buy():
     else:
         sym = request.form.get("symbol")
         sym = sym.upper()
-        shares = int(request.form.get("shares"))
+        shares = request.form.get("shares")
+        if not isinstance(shares, int):
+            return apology("invalid")
+        shares = int(shares)
         user_id = session["user_id"]
 
         bought = lookup(sym)
