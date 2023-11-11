@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Log In
+{% endblock %}
+
+{% block main %}
+    <h1>filter movies by your preference</h1>
+    <br>
+    <form action="/" method="post">
+        <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="year" max="2023" name="year" placeholder="minimun year" type="number">
+        <br>
+        <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="rating" step="0.1" max="10"  name="rating" placeholder="minimum rating" type="number" >
+        <br>
+        <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="actor1" name="actor1" placeholder="actor 1" type="text">
+        <br>
+        <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="actor2" name="actor2" placeholder="actor 2" type="text">
+        <br>
+        <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="director" name="director" placeholder="director" type="text">
+        <br>
+        <button class="btn btn-primary" type="submit">see results</button>
+    </Form>
+{% endblock %}
